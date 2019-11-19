@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="home-page">
+    <div class="ms-nav-wrapper">
+      <ms-header/>
+    </div>       
+    <ms-redefine-education></ms-redefine-education>
+    <ms-registration></ms-registration>
+    <ms-why-study></ms-why-study>
+    <ms-study></ms-study>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import msHeader from '@/components/header/ms-header.vue'
+import msRedefineEducation from '@/components/home/ms-redefine-education.vue'
+import msRegistration from '@/components/home/ms-registration.vue'
+import msWhyStudy from '@/components/home/ms-why-study.vue'
+import msStudy from '@/components/home/ms-study.vue'
 export default {
-  name: "home",
+  name: 'home',
   components: {
-    HelloWorld
+    msHeader,
+    msRedefineEducation,
+    msRegistration,
+    msWhyStudy,
+    msStudy
   }
 };
 </script>
